@@ -1,13 +1,11 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
 
 body {
-    background: #f0f2f5;
-    color: #5f5f5f;
+    background: rgb(240, 242, 245);
 }
 
 a {
@@ -15,62 +13,71 @@ a {
     color: #5f5f5f;
 }
 
+ul {
+    list-style: none;
+}
+
 .navbar {
     display: flex;
+    padding: 6px 6%;
     align-items: center;
     justify-content: space-between;
-    padding: 6px 6%;
     background: #fff;
     top: 0;
-    z-index: 100;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100px;
+    position: sticky;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0 , 0.1);
 }
 
 .logo img {
     width: 30px;
-    margin-right: 15px;
     display: block;
 }
 
-.nav-menu ul li {
-    display: inline-block;
-    list-style: none;
+.navbar-menu ul {
+    display: flex;
 }
 
-.nav-menu ul li a {
+.navbar-menu ul li {
+    margin: 8px;
+}
+
+.navbar-menu ul li a {
     display: flex;
     align-items: center;
-    font-size: 14px;
-    margin: 5px 8px;
+    font-size: 16px;
     padding-right: 5px;
     position: relative;
 }
 
-.nav-menu ul li a img {
+.navbar-menu ul li a img {
     width: 30px;
-
 }
 
-.nav-menu ul li a::after {
+.navbar-menu ul li a::after {
     content: '';
     width: 0;
     height: 2px;
-    background: #045be6;
-    bottom: -15px;
+    background: rgb(34, 115, 246);
+    bottom: -20px;
     position: absolute;
     transition: width 0.5s;
 }
 
-.nav-menu ul li a:hover::after,
-.nav-menu ul li a.active-link::after {
+.navbar-menu ul li a:hover::after {
     width: 100%;
 }
 
+.navbar-menu ul li a.active-link::after {
+    width: 100%;
+}
 
-.nav-profile a img {
+.profile img {
     width: 40px;
     border-radius: 50%;
     display: block;
+    cursor: pointer;
+    position: relative;
 }
 
 .online {
@@ -81,11 +88,11 @@ a {
     content: '';
     width: 7px;
     height: 7px;
-    background: green;
+    background: rgb(2, 205, 2);
     top: 0;
     right: 0;
     position: absolute;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     border-radius: 50%;
 }
 
@@ -93,24 +100,23 @@ a {
     background: #ececec;
     display: flex;
     align-items: center;
-    padding: 0 15px;
+    padding: 6px 12px;
+    margin-left: 16px;
     width: 250px;
     border-radius: 20px;
 }
 
 .search-box img {
-    width: 14px;
+    width: 15px;
 }
 
 .search-box input {
     outline: none;
-    border-style: none;
+    border: none;
     background: transparent;
-    width: 100%;
-    padding: 8px;
+    padding-left: 10px;
 }
 
 .navbar-left {
     display: flex;
-    align-items: center;
 }
